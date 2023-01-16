@@ -1,20 +1,21 @@
 package course;
 
 public class Course {
+	private INameList attendees;
 
 	public Course(INameList namelist) {
-		// TODO Auto-generated constructor stub
+		   this.attendees = namelist;
 	}
 
-	public void addAttendee(String attendee) {
-		return;
+	public void addAttendee(String name) {
+	    attendees.addName(name);
 	}
 
-	public String getAttendee(int attendee) {
-		return "Attendee";
+	public String getAttendee(int i) {
+	    return attendees.getName(i);
 	}
 
 	public void clearAttendeesList() {
-		return;
+	    attendees.clear();
 	}
 }
